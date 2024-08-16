@@ -1,0 +1,23 @@
+/* Container Styling 
+/* Column Styling */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Space between cards inside a column */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .gridDiv {
+        grid-template-columns: 1fr; /* Stacks columns in a single row */
+    }
+
+    .column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
+}
+
+
