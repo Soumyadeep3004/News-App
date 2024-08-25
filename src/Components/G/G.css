@@ -1,0 +1,40 @@
+.largercard{
+    /* background: greenyellow; */
+    grid-area: "largercard";
+}
+.cards{
+    /* background: goldenrod; */
+    grid-area: "cards";
+}
+.trending{
+    /* background: pink; */
+    grid-area: "trending";
+}
+.g1{
+    display: grid;
+    grid-template-columns: 35vw 20vw 20vw auto;
+    grid-template-rows: 800px;
+    grid-gap: 5px;
+    grid-template-areas: "largecard cards cards trending";
+    justify-content: center;
+}
+
+
+@media only screen and (max-width:1000px) {
+    .g1{
+        grid-template-columns: 0.5fr;
+        grid-template-rows:0.5fr 1fr 1fr 1fr;
+        grid-template-areas: "largecard"
+        "cards"
+        "cards"
+        "trending"
+        ;
+    }
+    .cards{
+        margin: 0 10%;
+    }
+    .trending{
+        margin: 0 10%;
+        /* display: none; */
+    }
+}

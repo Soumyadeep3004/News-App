@@ -1,23 +1,19 @@
-/* Container Styling 
-/* Column Styling */
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* Space between cards inside a column */
+.largercard1{
+    grid-area: "large1";
 }
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-    .gridDiv {
-        grid-template-columns: 1fr; /* Stacks columns in a single row */
-    }
-
-    .column {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    
+.regular{
+    grid-area: "regular";
 }
-
-
+.trending{
+    grid-area: "trending";
+}
+@media only screen and (max-width:1000px){
+    .grid1{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "large1"
+        "regular regular"
+        "trending"
+        ;
+    }
+}

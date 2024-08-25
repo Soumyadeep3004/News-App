@@ -4,18 +4,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import LargeCard1 from '../Cards/LargeCard1';
 import RegularCards from '../Cards/RegularCards';
-import Trending from '../Trending'
+import Trending from '../Trending';
 
-export const Rgrid1 = () => {
+
+export const RG1 = () => {
     return (
         <Container>
             <Row>
-                <Col xxl={3}><LargeCard1/></Col>
-                <Col sm={3}><RegularCards/></Col>
-                <Col sm={3}><RegularCards/></Col>
-                <Col sm={3}><Trending/></Col>
-            </Row>
-            
+                <Col lg={4}><LargeCard1/></Col>
+                <Col lg={3}><RegularCards css={{border:'none'}}/></Col>
+                <Col lg={3}><RegularCards css={{border:'none' }}/></Col>
+                <Col lg={2}><Trending/></Col>
+            </Row>    
         </Container>
     )
 }

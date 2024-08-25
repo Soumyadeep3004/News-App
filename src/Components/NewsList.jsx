@@ -10,7 +10,7 @@ export default function NewsList() {
             <ul style={{ listStyle: 'none'}}>
                 {
                     temp.map((val) => (
-                        <div>
+                        <div key={val}>
                             <li style={{ margin: '30px 10px' }}>
                                 <a href="">
                                     {/* <span>1</span> */}

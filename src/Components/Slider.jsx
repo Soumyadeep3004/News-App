@@ -19,11 +19,11 @@ export default function Slider() {
     };
     const temp = [1, 2, 3]
     return (
-        <div style={{ padding: '40px 60px', margin: '5px' }}>
+        <div >
             <Carousel>
                 {
                     temp.map((val) => (
-                        <Carousel.Item interval={1000}>
+                        <Carousel.Item interval={1000} key={val}>
                             <div style={{height:'600px', width:'100vw', backgroundColor:'#000',position: "absolute",opacity:'0.5'}}></div>
                             {/* <div style={styles.imageOverlay}></div>
                             <div  style={styles.image} > */}
