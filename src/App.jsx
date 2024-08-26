@@ -6,21 +6,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavigationBar from './Components/NavigationBar'
 import Slider from './Components/Slider';
-import { Grid1, Grid2, Grid3, Grid4 } from './Components/Grids';
+
 import { RG1 } from './Components/ReactGrids/RG1';
 import { RG2 } from './Components/ReactGrids/RG2';
+import { RG3 } from './Components/ReactGrids/RG3';
+import { RG4 } from './Components/ReactGrids/RG4';
+import { Footer } from './Components/Footer';
 function App() {
 
   return (
     <div>
       <NavigationBar/>
       <Slider/>
-      {/* <Grid1/> */}
-      {/* <Grid2/>
-      <Grid3/>
-      <Grid4/> */}
+      <div style={{height:'7vh'}}></div>
       <RG1/>
       <RG2/>
+      <RG3/>
+      <RG4/>
+      <Footer/>
     </div>
   )
 }

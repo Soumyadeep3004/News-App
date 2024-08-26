@@ -7,7 +7,7 @@ export default function LargeCard1() {
     return (
         <span style={{margin:'7px'}}>
             <Card className='card' style={{ border:'none'}}>
-                <Card.Img variant="top" src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
+                <Card.Img variant="top" src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" style={{padding:'4px'}}/>
                 <Card.Body>
                     <span>Culture - Jul 5th '24</span>
                     <Card.Title><h2 style={{fontSize:'35px'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi </h2>

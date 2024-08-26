@@ -1,0 +1,25 @@
+.socialIcons{
+    display: flex;
+    /* justify-content: center; */
+    margin: 10px 0px;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+   font-size: 25px;
+   color: black;
+   opacity: 0.9; 
+}
+.socialIcons a:hover{
+    background-color: #111;
+    /* transition: 0.5s; */
+}
+.socialIcons a i:hover{
+    color: white;
+    /* transition: 0.5s; */
+}

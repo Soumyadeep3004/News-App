@@ -5,16 +5,11 @@ import { Row, Col, Container } from 'react-bootstrap';
 
 export default function LargeCard2() {
     return (
-        // <div style={{ display: 'flex', alignItems: 'center' }} >
-        //     <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image" style={{ height: '400px', width: '600px' }} />
 
         <Container>
             <Row>
                 <Col lg={7}>
-                    
-
                         <img src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="image" style={{width:'100%'}} />
-
                 </Col>
                 <Col lg={5}>
                     <Card style={{ border: 'none' }}>
@@ -28,9 +23,9 @@ export default function LargeCard2() {
                             </Card.Text>
                         </Card.Body>
                         <Card.Body>
-                            <Card.Link href="#">
+                            {/* <Card.Link href="#">
                                 <Button variant="outline-primary">More...</Button>
-                            </Card.Link>
+                            </Card.Link> */}
                         </Card.Body>
                     </Card>
                 </Col>

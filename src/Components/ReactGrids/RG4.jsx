@@ -8,12 +8,15 @@ import RegularCard from '../Cards/RegularCard';
 import SmallCard from '../Cards/SmallCard';
 import { Title } from '../Title'
 
-export const RG2 = () => {
+export const RG4 = () => {
     return (
         <div>
             <Title title={"Sports"} />
             <Container>
                 <Row>
+                    <Col xxl={3}>
+                        <div><NewsList/></div>
+                    </Col>
                     <Col xxl={9}>
                         <Row><LargeCard2 /></Row>
                         <Row>
@@ -25,15 +28,8 @@ export const RG2 = () => {
                             <Col><RegularCard css={{ border: 'none' }} /></Col>
                         </Row>
                     </Col>
-                    <Col xxl={3}>
-                        <div><NewsList/></div>
-                    </Col>
                 </Row>
             </Container>
         </div>
     )
 }
-
-// const styles = {
-//     background: 'violet', border: '2px solid white'
-// }

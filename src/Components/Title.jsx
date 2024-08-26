@@ -3,7 +3,7 @@ import React from 'react'
 export const Title = ({title}) => {
     return (
         <div style={{
-            margin: '50px 60px',
+            margin: '50px 6%',
             padding: '4px 0px',
             borderStyle: 'solid',
             borderWidth: "0px",
@@ -15,7 +15,7 @@ export const Title = ({title}) => {
             alignItems: 'center'
         }}>
             <h2>{title}</h2>
-            <a href="">See All</a>
+            <a href="">See All {title}</a>
         </div>
     )
 }
