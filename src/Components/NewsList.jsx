@@ -16,8 +16,8 @@ export default function NewsList() {
                                 <a href="">
                                     {/* <span>1</span> */}
                                     <h4>The Best Homemade Masks for Face (keep the Pimples Away)</h4>
-                                    <span>Jane Cooper</span>
                                 </a>
+                                <span>Jane Cooper</span>
                             </div>
                             <hr />
                         </div>

@@ -12,6 +12,11 @@ import { RG2 } from './Components/ReactGrids/RG2';
 import { RG3 } from './Components/ReactGrids/RG3';
 import { RG4 } from './Components/ReactGrids/RG4';
 import { Footer } from './Components/Footer';
+import { CategoryPage } from './Components/CategoryPage';
+import { CategoricalImages } from './Components/CategoricalImages';
+import { Temp } from './Components/Temp';
+
+
 function App() {
 
   return (
@@ -23,7 +28,10 @@ function App() {
       <RG2/>
       <RG3/>
       <RG4/>
-      <Footer/>
+      <Footer/> 
+      {/* <CategoryPage/>
+      {/* <CategoricalImages/> */}
+        {/* <Temp/> */}
     </div>
   )
 }
