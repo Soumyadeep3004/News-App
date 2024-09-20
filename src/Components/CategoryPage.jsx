@@ -1,37 +1,39 @@
 import React from 'react'
-import NavigationBar from './NavigationBar'
-import { CategoryCards } from './CategoryCards'
+import NavigationBar from './Navbar/NavigationBar'
+import { CategoryCards } from './Cards/CategoryCards'
 import { Footer } from './Footer'
-import { CategoricalImages } from './CategoricalImages'
-import { Col, Container,Row } from 'react-bootstrap'
+import { RG5 } from './ReactGrids/RG5'
+import { useParams } from 'react-router'
+import { FiveLineTitle } from './FiveLineTitle'
+import { Container, Row, Col } from 'react-bootstrap'
 
-export const CategoryPage = ({cat}) => {
+export const CategoryPage = () => {
+  const { cat } = useParams();
+  console.log(cat);
+  console.log(typeof (cat));
+
+
   return (
     <div>
-        <NavigationBar/>
-        <div style={{display:'flex',justifyContent:'center'}}>
-            <h1>{cat}</h1>
-        </div>
-        <Container className='categoryImage'>
-            <Row>
-                <Col style={{padding:'8px'}} lg={6}><CategoricalImages/></Col>
-                <Col style={{padding:'8px'}} lg={6}><CategoricalImages/></Col>
-            </Row>
-            <Row>
-                <Col style={{padding:'8px'}} lg={3}><CategoricalImages/></Col>
-                <Col style={{padding:'8px'}} lg={3}><CategoricalImages/></Col>
-                <Col style={{padding:'8px'}} lg={3}><CategoricalImages/></Col>
-                <Col style={{padding:'8px'}} lg={3}><CategoricalImages/></Col>
-            </Row>
-        </Container>
-        <div style={{margin:'3% 3%'}}>
-            <hr/>
-        </div>
-        <div>
-            <h2 style={{margin:'2% 25%'}}>More stories from {cat}</h2>
-        </div>
-        <CategoryCards/>
-        <Footer/>
+      <NavigationBar />
+      <div style={{
+        display: 'flex', justifyContent: 'center', alignItems: 'center'
+      }}>
+        <h1 style={{
+          fontFamily: 'Playfair Display,serif',
+          fontWeight: '900',
+          color: 'rgba(154, 17, 17, 0.886)',
+          fontSize: '60px'
+        }}>{cat}</h1>
+      </div>
+      <RG5 cat={cat} />
+      <div style={{ margin: '3% 3%' }}>
+        <hr />
+      </div>
+      <div style={{margin:'50px 0'}}>
+        <CategoryCards cat={cat} />
+      </div>
+      <Footer />
     </div>
   )
 }

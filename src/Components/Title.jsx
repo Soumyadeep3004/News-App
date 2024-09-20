@@ -16,7 +16,7 @@ export const Title = ({title}) => {
             alignItems: 'center'
         }}>
             <h2>{title}</h2>
-            <a href="">See All {title}</a>
+            <Link to={`/category/${title}`}>See All {title}</Link>
         </div>
     )
 }

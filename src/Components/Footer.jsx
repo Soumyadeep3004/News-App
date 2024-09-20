@@ -1,8 +1,9 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import img from "../assets/output-onlinepngtools.png"
+
 import google from "../assets/google.png"
 import apple from "../assets/apple.png"
+import logo from "../Components/Navbar/logo.png"
 export const Footer = () => {
     return (
         <div style={{ background: '#ececec' }}>
@@ -12,7 +13,7 @@ export const Footer = () => {
                     <Row>
                         <Col xl={3}>
                             <div style={{padding:'5% 1%'}}>
-                                <img style={{ height: '130px', width: '190px'}} src={img} alt="error" />
+                                <img style={{width: '190px'}} src={logo} alt="error" />
                             </div>
 
                         </Col>
@@ -55,7 +56,7 @@ export const Footer = () => {
                         </Col>
                     </Row>
                     <hr />
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center" }}>
                         <div>
                             <a href="">
                                 <img src={google} alt="" style={{ height: '32px', width: 'auto' }} />
@@ -70,7 +71,7 @@ export const Footer = () => {
                             <a href=""><i className='fa-brands fa-twitter'></i></a>
                             <a href=""><i className='fa-brands fa-youtube'></i></a>
                             <a href=""><i className='fa-brands fa-whatsapp'></i></a>
-                            <a href=""><i className='fa-brands fa-telegram'></i></a>
+                            {/* <a href=""><i className='fa-brands fa-telegram'></i></a> */}
                         </div>
                     </div>
                     <hr />

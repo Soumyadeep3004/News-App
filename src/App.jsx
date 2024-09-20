@@ -3,36 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import NavigationBar from './Components/NavigationBar'
-import Slider from './Components/Slider';
-
-import { RG1 } from './Components/ReactGrids/RG1';
-import { RG2 } from './Components/ReactGrids/RG2';
-import { RG3 } from './Components/ReactGrids/RG3';
-import { RG4 } from './Components/ReactGrids/RG4';
-import { Footer } from './Components/Footer';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import { HomePage } from './Components/HomePage';
 import { CategoryPage } from './Components/CategoryPage';
-import { CategoricalImages } from './Components/CategoricalImages';
-import { Temp } from './Components/Temp';
-
 
 function App() {
 
   return (
-    <div>
-      <NavigationBar/>
-      <Slider/>
-      <div style={{height:'7vh'}}></div>
-      <RG1/>
-      <RG2/>
-      <RG3/>
-      <RG4/>
-      <Footer/> 
-      {/* <CategoryPage/>
-      {/* <CategoricalImages/> */}
-        {/* <Temp/> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/category/:cat" element={<CategoryPage/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

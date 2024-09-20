@@ -1,7 +1,7 @@
 .socialIcons {
   display: flex;
   /* justify-content: center; */
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
 }
 .socialIcons a {
   text-decoration: none;
@@ -46,4 +46,26 @@ li a:hover {
 .categoryImage img:hover {
   transform: scale(1.1);
   transition: .5s ease;
+}
+@media screen and (max-width: 480px) {
+  .verticalCardImage img{
+      height: 100px;
+  }
+}
+
+.verticalCardImage img{
+  width:200px ;
+  height: auto;
+  overflow:hidden;
+  display: block; 
+}
+body a{
+  text-decoration: none;
+  color: black;
+}
+body a:hover{
+  text-decoration: underline;
+}
+body a h1 h2 h3 h4 h5 h6:hover{
+  text-decoration: underline;
 }

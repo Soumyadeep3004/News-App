@@ -1,0 +1,107 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    box-shadow:0px 5px 8px rgba(0,0,0,0.3);
+    /* align-items: center; */
+}
+
+.category-list ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 700;
+    border-top: 5px solid black;
+    width: 200px;
+    margin-right: 19px;
+    padding-top: 2px;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+.category-list ul li:hover{
+    color:rgba(154, 17, 17, 0.886);
+    border-top: 5px solid rgba(154, 17, 17, 0.886);
+    cursor: pointer;
+}
+.logo img{
+    height: 110px;
+    margin-bottom: 15px;
+}
+.category-items{
+    display:none;
+}
+@media (max-width: 1000px) {
+    .category-list ul li{
+        width: 120px;
+    }
+    .logo img{
+      height: 90px;
+      /* margin-bottom: 15px; */
+  }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      /* height: auto; */
+      padding: 10px 0;
+    }
+    .category-items{
+        display:contents;
+    }
+    .category-items a{ 
+        display:inline-block;
+    }
+    .category-list{
+        padding: 10px;
+        display: none;
+    }
+    .logo img{
+        height: 50px;
+        /* margin-bottom: 15px; */
+    }
+    .category-list ul li{
+        width: 120px;
+    }
+  }
+
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 50px 10px 15px; /* Space for the button */
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color:rgba(154, 17, 17, 0.886);
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:white;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: rgba(154, 17, 17, 0.886);
+  }
+  
+  .search-button:focus {
+    outline: none;
+  }
+  

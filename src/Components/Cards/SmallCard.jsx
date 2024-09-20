@@ -1,15 +1,18 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card';
-export default function SmallCard() {
+export default function SmallCard({ news }) {
+    const data = news ? news : undefined
     return (
-        <div>
-            <Card className='card' style={{ border: 'none' }}>
-                <Card.Body>
-                    <span>Culture - Jul 5th '24</span>
-                    <Card.Title><h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
-                    </Card.Title>
-                </Card.Body>
-            </Card>
-        </div>
+        <a href={data?.url ? data.url : null}>
+            <div>
+                <Card className='card' style={{ border: 'none' }}>
+                    <Card.Body>
+                        <Card.Title><h4>{data?.title ? data.title : null}</h4>
+                        </Card.Title>
+                        <span>{data?.author ? data.author : null}</span>
+                    </Card.Body>
+                </Card>
+            </div>
+        </a>
     )
 }

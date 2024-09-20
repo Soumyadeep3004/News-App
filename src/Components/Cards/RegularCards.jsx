@@ -1,26 +1,34 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-export default function RegularCards({ css, ...others }) {
+import image from './subLogo.png'
+export default function RegularCards({ css, news }) {
+    // console.log("news> " ,news);
+    // const data = news && news[0]
+    // const data = news ? news.slice(1,4) : undefined
+    // console.log("data",data);
+    
+    // console.log(data);
     const temp = [1, 2, 3]
-    return (
 
-            <span style={{ margin: '7px'}} {...others}>
-                {
-                    temp.map((val) => (
-                        <Card key={val} className='card' style={css}>
-                            <Card.Img variant="top" src="https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"  style={{padding:'4px'}}/>
+    return (
+        <span style={{ margin: '7px' }}>
+            {
+                news?.map((val) => (
+                    <a href={val.url} key={val.title}>
+                        <Card className='card' style={css}>
+                            <Card.Img variant="top" src={val?.urlToImage ? val.urlToImage : image} style={{ padding: '4px' }} />
                             <Card.Body>
-                                <span>Culture - Jul 5th '24</span>
-                                <Card.Title><h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+                                <Card.Title><h4>{val.title}</h4>
                                 </Card.Title>
-                                <Button variant="outline-primary">More...</Button>
+                                <span>{val.author}</span>
+                                {/* <Button variant="outline-primary">More...</Button> */}
                             </Card.Body>
                         </Card>
-                    ))
-                }
+                    </a>
+                ))
+            }
 
-            </span>
+        </span>
     )
 }
